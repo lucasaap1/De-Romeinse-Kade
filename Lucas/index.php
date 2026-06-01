@@ -17,6 +17,12 @@
         <?php include('../Lucas/prefabs/navbar.php') ?>
     </header>
 
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>De Romeinse Kade</h1>
+            <p>Welkom op onze website.</p>
+        </div>
+    </div>
     <main>
         <div class="container-information">
             <div id="locatie" class="informatie">
