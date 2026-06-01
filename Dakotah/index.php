@@ -23,7 +23,7 @@
         </div>
         <div class="grid" id="menu-items">
             <h5>Menu-Items</h5>
-            <p>...</p>
+            <p>......</p>
         </div>
         <div class="grid" id="Bestellingen">
             <h5>Bestellingen</h5>
