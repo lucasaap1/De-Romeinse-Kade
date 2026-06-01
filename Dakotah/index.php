@@ -8,13 +8,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling/styling.css">
-    <title>De Romeinse Kade - home</title>
+    <title>De Romeinse Kade - accounts</title>
 </head>
 
 <body>
     <header>
         <h2>De Romeinse Kade</h2>
-        <p>Restaurant beheerpagina</p>
+        <p>Restaurant accountpagina</p>
     </header>
     <div class="information-container">
         <div class="grid" id="accounts">
