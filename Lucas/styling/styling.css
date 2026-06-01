@@ -248,7 +248,7 @@ table tr {
   box-shadow: #292929 0px 0px 10px;
   border-top: rgb(255, 127, 80) 3.5px solid;
   margin-left: 5%;
-  margin-right:5%;
+  margin-right: 5%;
 }
 
 .informatie::-webkit-scrollbar {
@@ -271,7 +271,9 @@ table tr {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../main/images/hero-image.png");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("../../main/images/hero-image.png");
   height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -286,4 +288,14 @@ table tr {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.Romein_Origin {
+  margin-top: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 32px;
+  width: 150px;
+  height: 40px;
+  border-top: rgb(255, 127, 80) 2px solid;
 }

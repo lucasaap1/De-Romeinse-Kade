@@ -21,6 +21,7 @@
         <div class="hero-text">
             <h1>De Romeinse Kade</h1>
             <p>Welkom op onze website.</p>
+            <a target="_blank" href="https://romeinaanhetwater.nl/"><button class="Romein_Origin">Romein originele website</button></a>
         </div>
     </div>
     <main>
