@@ -9,30 +9,35 @@
 </head>
 
 <body>
-    <header>
-        <h2>De Romeinse Kade</h2>
-        <p>Restaurant beheerpagina</p>
-    </header>
-    <div class="information-container">
-        <div class="grid" id="accounts">
-            <h5>Accounts</h5>
-            <p>0</p>
-        </div>
-        <div class="grid" id="menu-items">
-            <h5>Menu-Items</h5>
-            <p>0</p>
-        </div>
-        <div class="grid" id="Bestellingen">
-            <h5>Bestellingen</h5>
-            <p>0</p>
-        </div>
-        <div class="grid" id="Omzet">
-            <h5>Omzet</h5>
-            <p>€0</p>
-        </div>
-    </div>
-
     <!--Navigation bar-->
-    <?php include('../Lucas/prefabs/navbar.php') ?>
+    <header>
+        <?php include('../Lucas/prefabs/navbar.php') ?>
+    </header>
+
+    <main>
+        <h2>Openingstijden</h2>
+        <table>
+        <tr>
+            <th>Ma</th>
+            <th>Di</th>
+            <th>Wo</th>
+            <th>Do</th>
+            <th>Vr</th>
+            <th>Za</th>
+            <th>Zo</th>
+        </tr>
+        <tr>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+            <td>Vanaf 12:00</td>
+        </tr>
+        </table>
+
+    </main>
 </body>
+
 </html>
