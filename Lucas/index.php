@@ -19,8 +19,7 @@
 
     <div class="hero-image">
         <div class="hero-text">
-            <h1>De Romeinse Kade</h1>
-            <p>Welkom op onze website.</p>
+            <img style="width:700px ;" src="../../De-Romeinse-Kade/main/images/romeinse_kade_logo_witte_text.png" alt="De Romeinse Kade logo">
             <a target="_blank" href="https://romeinaanhetwater.nl/"><button class="Romein_Origin">Romein originele website</button></a>
         </div>
     </div>
