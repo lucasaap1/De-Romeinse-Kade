@@ -1,0 +1,15 @@
+<?php
+class menu
+{
+    public function itemsRead() {
+        
+    }
+
+    public function addToMenu() {
+
+    }
+
+    public function deleteItemFromMenu() {
+
+    }
+}
