@@ -1,4 +1,11 @@
-<?php require_once('../classes/menu'); require_once('../../../De-Romeinse-Kade/main/db/db.php') ?>
+<?php 
+
+$db = include_once('../De-Romeinse-Kade/main/db/db.php');
+$statement = $db->prepare(""); 
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +25,7 @@
 
     <!--menu-->
     <div class="menu-container">
-        
+        <?php ?>
 
     </div>
 </body>

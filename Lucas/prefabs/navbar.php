@@ -13,7 +13,7 @@
     <a class="rk-brand" href="#">De Romeinse<br>Kade</a>
 
     <div class="rk-links" id="desktopLinks">
-      <a href="../../../De-Romeinse-Kade/Lucas/index.php">Home</a>
+      <a href="../../../De-Romeinse-Kade/Lucas/index.php" class="active">Home</a>
       <a href="../../../De-Romeinse-Kade/Lucas/pages/menu.php">Menukaart</a>
       <a href="../../../De-Romeinse-Kade/Lucas/pages/reserve.php">Reserveren</a>
       <a href="../../../De-Romeinse-Kade/Lucas/pages/about.php">Over ons</a>
