@@ -1,15 +1,22 @@
 <?php
-class menu
+
+class Menu
 {
-    public function itemsRead() {
-        
-    }
+    public function showItems()
+    {
+        $db = include '../../../De-Romeinse-Kade/main/db/db.php';
 
-    public function addToMenu() {
+        $getItems = $db->prepare("SELECT * FROM items");
+        $getItems->execute();
 
-    }
-
-    public function deleteItemFromMenu() {
-
+        return $getItems->fetchAll(PDO::FETCH_ASSOC);
     }
 }
+    // public function addToMenu() {
+
+    // }
+
+    // public function deleteItemFromMenu() {
+
+    // }
+// }
