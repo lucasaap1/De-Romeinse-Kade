@@ -1,10 +1,12 @@
-<?php 
+<?php
+require_once __DIR__ . '/../classes/classMenu.php';
 
-$db = include_once('../De-Romeinse-Kade/main/db/db.php');
-$statement = $db->prepare(""); 
+// classes
+$menu = new Menu();
+$items = $menu->readItems();
 
-
-
+$dbClass = new Database();
+$db = $dbClass->connection();
 ?>
 
 <!DOCTYPE html>
@@ -13,21 +15,28 @@ $statement = $db->prepare("");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Links -->
-    <link rel="stylesheet" href="../../Lucas/styling/styling.css">
-    <!--Title -->
+
+<!--links -->   
+<link rel="stylesheet" href="../../Lucas/styling/styling.css">
     <title>Menu</title>
 </head>
 
 <body>
+
     <!--navbar -->
     <?php include('../../Lucas/prefabs/navbar.php') ?>
 
-    <!--menu-->
-    <div class="menu-container">
-        <?php ?>
 
-    </div>
+<!--Menu -->
+<div class="menu-container">
+    <?php foreach ($items as $item): ?>
+        <div class="menu-item">
+            <h3><?= htmlspecialchars($item['item']) ?></h3>
+            <p><?= htmlspecialchars($item['omschrijving']) ?></p>
+            <p>€<?= htmlspecialchars($item['prijs']) ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>
 </body>
 
 </html>
