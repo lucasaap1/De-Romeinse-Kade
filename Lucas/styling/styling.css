@@ -1,18 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500&display=swap");
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
   padding: 0;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 .rk-nav {
   width: 100%;
   background: #fff;
   border-bottom: 3px solid #c8860a;
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   padding: 0 2rem;
   display: flex;
   align-items: center;
@@ -22,7 +30,7 @@ body {
 }
 
 .rk-brand {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 600;
   font-size: 20px;
   color: #c8860a;
@@ -43,7 +51,7 @@ body {
 }
 
 .rk-links a {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #2c2c2a;
@@ -62,7 +70,7 @@ body {
 }
 
 .rk-links a.active::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: -4px;
@@ -73,7 +81,9 @@ body {
   border-radius: 1px;
 }
 
-.rk-links a:hover { color: #c8860a; }
+.rk-links a:hover {
+  color: #c8860a;
+}
 
 .rk-right {
   margin-left: auto;
@@ -98,7 +108,9 @@ body {
   transition: background 0.2s;
 }
 
-.rk-dark-btn:hover { background: #f5e9c5; }
+.rk-dark-btn:hover {
+  background: #f5e9c5;
+}
 
 .rk-burger {
   display: none;
@@ -124,7 +136,7 @@ body {
 }
 
 .rk-mobile-menu a {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 15px;
   color: #2c2c2a;
   text-decoration: none;
@@ -134,34 +146,156 @@ body {
   transition: color 0.2s;
 }
 
-.rk-mobile-menu a:last-child { border-bottom: none; }
-.rk-mobile-menu a.active { color: #c8860a; font-weight: 500; }
-.rk-mobile-menu a:hover { color: #c8860a; }
-.rk-mobile-menu.open { display: flex; }
+.rk-mobile-menu a:last-child {
+  border-bottom: none;
+}
+.rk-mobile-menu a.active {
+  color: #c8860a;
+  font-weight: 500;
+}
+.rk-mobile-menu a:hover {
+  color: #c8860a;
+}
+.rk-mobile-menu.open {
+  display: flex;
+}
 
 /* Dark mode */
-body.dark .rk-nav { background: #1a1a18; border-bottom-color: #c8860a; }
-body.dark .rk-brand { color: #e8aa3a; }
-body.dark .rk-links a { color: #d3d1c7; }
-body.dark .rk-links a.active { color: #e8aa3a; }
-body.dark .rk-links a.active::after { background: #e8aa3a; }
-body.dark .rk-links a:hover { color: #e8aa3a; }
-body.dark .rk-dark-btn { background: #2c2c2a; border-color: #444441; color: #e8aa3a; }
-body.dark .rk-dark-btn:hover { background: #3a3a38; }
-body.dark .rk-burger { border-color: #444441; color: #e8aa3a; background: #2c2c2a; }
-body.dark .rk-mobile-menu { background: #1a1a18; border-top-color: #333; }
-body.dark .rk-mobile-menu a { color: #d3d1c7; border-bottom-color: #333; }
-body.dark .rk-mobile-menu a.active { color: #e8aa3a; }
-body.dark .rk-mobile-menu a:hover { color: #e8aa3a; }
+body.dark .rk-nav {
+  background: #1a1a18;
+  border-bottom-color: #c8860a;
+}
+body.dark .rk-brand {
+  color: #e8aa3a;
+}
+body.dark .rk-links a {
+  color: #d3d1c7;
+}
+body.dark .rk-links a.active {
+  color: #e8aa3a;
+}
+body.dark .rk-links a.active::after {
+  background: #e8aa3a;
+}
+body.dark .rk-links a:hover {
+  color: #e8aa3a;
+}
+body.dark .rk-dark-btn {
+  background: #2c2c2a;
+  border-color: #444441;
+  color: #e8aa3a;
+}
+body.dark .rk-dark-btn:hover {
+  background: #3a3a38;
+}
+body.dark .rk-burger {
+  border-color: #444441;
+  color: #e8aa3a;
+  background: #2c2c2a;
+}
+body.dark .rk-mobile-menu {
+  background: #1a1a18;
+  border-top-color: #333;
+}
+body.dark .rk-mobile-menu a {
+  color: #d3d1c7;
+  border-bottom-color: #333;
+}
+body.dark .rk-mobile-menu a.active {
+  color: #e8aa3a;
+}
+body.dark .rk-mobile-menu a:hover {
+  color: #e8aa3a;
+}
 
-table tr{
-  display:flex;
+table tr {
+  display: flex;
   flex-direction: column;
 }
 
 /* Responsive */
-@media (max-width: 700px) {
-  .rk-links { display: none; }
-  .rk-burger { display: flex; }
-  .rk-nav { padding: 0 1.25rem; }
+@media (max-width: 1044px) {
+  .rk-links {
+    display: none;
+  }
+  .rk-burger {
+    display: flex;
+  }
+  .rk-nav {
+    padding: 0 1.25rem;
+  }
+}
+
+/* informatie restaurant */
+
+.container-information {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.informatie {
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-left: 25px;
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 150px;
+  border-radius: 12px;
+  box-shadow: #292929 0px 0px 10px;
+  border-top: rgb(255, 127, 80) 3.5px solid;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.informatie::-webkit-scrollbar {
+  display: none;
+}
+
+.informatie h3,
+.informatie p {
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+  margin-right: 40px;
+}
+.informatie h3 {
+  margin-top: 15px;
+}
+.informatie p {
+  margin-top: 12px;
+  color: rgba(71, 71, 71, 0.66);
+}
+
+.hero-image {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("../../main/images/hero-image.png");
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.Romein_Origin {
+  margin-top: 25px;
+  background-color: black;
+  color: white; 
+  border-radius: 32px;
+  width: 150px;
+  height: 40px;
+  border-top: rgb(255, 127, 80) 2px solid;
 }
