@@ -1,3 +1,7 @@
+<?php
+require_once '../class/accountClass.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +19,34 @@
     <header>
         <?php include('../../../De-Romeinse-Kade/dakotah/prefabs/navbar.php') ?>
     </header>
+    <main>
+        <form action="registration.php" method="POST">
+            <h1>Registration</h1>
+            <label for="username">naam:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit"name="register">Register</button>
+        </form>
+    </main>
 </body>
 
 </html>
+
+<?php
+   if (isset($_POST['username'])) {
+       $username = $_POST['username'];
+       echo "Username: " . $username . "<br>";
+   }
+   if (isset($_POST['register'])) {
+       $username = $_POST['username'];
+       echo "registered: " . $username . "<br>";
+       $account = new Account();
+       $account->register($_POST['username'], $_POST['email'], $_POST['password']);
+   }
+?>

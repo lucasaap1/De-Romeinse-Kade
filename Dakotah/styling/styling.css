@@ -299,3 +299,28 @@ table tr {
   height: 40px;
   border-top: rgb(255, 127, 80) 2px solid;
 }
+
+
+/* menu */
+
+.menu-container{
+  display:flex;
+}
+
+.menu-item{
+  margin: 26px 32px;
+  background-color: rgba(255, 166, 134, 0.737);
+  border-radius: 12px;
+  box-shadow: rgba(255, 127, 80, 0.496) 0px 0px 20px;
+  
+}
+
+.menu-item h3{
+  padding-left: 12px;
+  color:rgb(0, 0, 0);
+}
+
+.menu-item p{
+  padding-left: 22px;
+  color: rgba(0, 0, 0, 0.674);
+}
