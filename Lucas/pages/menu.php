@@ -1,49 +1,95 @@
 <?php
+
 require_once __DIR__ . '/../classes/classMenu.php';
 
-// classes
 $menu = new Menu();
+
+/*
+ * Tijdelijk hardcoded account ID.
+ * In jouw database bestaat account ID 2.
+ */
+$customerId = 2;
+
+if (isset($_POST['add'])) {
+
+    $menu->addToOrder(
+        $customerId,
+        (int)$_POST['item_id']
+    );
+
+    header("Location: menu.php");
+    exit;
+}
+
+if (isset($_POST['delete'])) {
+
+    $menu->deleteItem(
+        (int)$_POST['item_id']
+    );
+
+    header("Location: menu.php");
+    exit;
+}
+
 $items = $menu->readItems();
 
-$dbClass = new Database();
-$db = $dbClass->connection();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--links -->
-    <link rel="stylesheet" href="../../Lucas/styling/styling.css">
     <title>Menu</title>
+
+    <link rel="stylesheet" href="../../Lucas/styling/styling.css">
 </head>
 
 <body>
 
-    <!--navbar -->
-    <?php include('../../Lucas/prefabs/navbar.php') ?>
+<?php include('../../Lucas/prefabs/navbar.php'); ?>
 
+<div class="menu-container">
 
-    <!--Menu -->
-    <div class="menu-container">
-        <?php foreach ($items as $item): ?>
-            <div class="menu-item">
-                <h3><?= htmlspecialchars($item['item']) ?></h3>
-                <p><?= htmlspecialchars($item['omschrijving']) ?></p>
-                <p>€<?= htmlspecialchars($item['prijs']) ?></p>
+    <?php foreach ($items as $item): ?>
 
-                <form action="menu.php" method="post">
-                    <button class="add">Voeg toe</button>
-                    <button class="update">Verander eten</button>
-                    <button class="delete">Verwijder</button>
+        <div class="menu-item">
 
-                </form>
-            </div>
-        <?php endforeach; ?>
-    </div>
+            <h3><?= htmlspecialchars($item['item']) ?></h3>
+
+            <p><?= htmlspecialchars($item['omschrijving']) ?></p>
+
+            <p>€<?= htmlspecialchars($item['prijs']) ?></p>
+
+            <form method="post">
+
+                <input
+                    type="hidden"
+                    name="item_id"
+                    value="<?= $item['ID'] ?>">
+
+                <button
+                    type="submit"
+                    name="add"
+                    class="add">
+                    Voeg toe
+                </button>
+
+                <button
+                    type="submit"
+                    name="delete"
+                    class="delete">
+                    Verwijder
+                </button>
+
+            </form>
+
+        </div>
+
+    <?php endforeach; ?>
+
+</div>
+
 </body>
-
 </html>
