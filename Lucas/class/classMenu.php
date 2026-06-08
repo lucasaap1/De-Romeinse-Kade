@@ -1,8 +1,7 @@
 <?php
-
 require_once '../../../De-Romeinse-Kade/main/db/db.php';
 
-class Menu
+class ShoppingCart
 {
     private PDO $db;
 
@@ -11,22 +10,18 @@ class Menu
         $dbClass = new Database();
         $this->db = $dbClass->connection();
     }
-
     public function readItems(): array
     {
         $stmt = $this->db->prepare("SELECT * FROM items");
         $stmt->execute();
-
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
     public function addItem(string $item, float $prijs, string $omschrijving): bool
     {
         $stmt = $this->db->prepare("
             INSERT INTO items (item, prijs, omschrijving)
             VALUES (:item, :prijs, :omschrijving)
         ");
-
         return $stmt->execute([
             ':item' => $item,
             ':prijs' => $prijs,
@@ -49,10 +44,16 @@ class Menu
 
     public function deleteItem(int $id): bool
     {
+        if ($id <= 0) {
+            return false;
+            echo "false";
+        }
+
         $stmt = $this->db->prepare("
-            DELETE FROM items
-            WHERE ID = :id
-        ");
+        DELETE FROM bestellingen
+        WHERE item = :id
+        LIMIT 1
+    ");
 
         return $stmt->execute([
             ':id' => $id
