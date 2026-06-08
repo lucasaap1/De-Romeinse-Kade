@@ -22,4 +22,21 @@ class Account
     {
     }
 }
+
+class read
+{
+    public function allAccounts()
+    {
+        $dbClass = new Database();
+        $db = $dbClass->connection();
+        $stmt = $db->prepare("SELECT * FROM accounts");
+        $stmt->execute();
+        while ($row = $stmt->fetch()) {
+            echo "ID: " . $row['ID'] . "<br>";
+            echo "Naam: " . $row['naam'] . "<br>";
+            echo "Email: " . $row['email'] . "<br>";
+            echo "Wachtwoord: " . $row['wachtwoord'] . "<br>";
+        }
+    }
+}
 ?>

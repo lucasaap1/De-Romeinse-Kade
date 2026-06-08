@@ -1,5 +1,5 @@
 <?php
-require_once '../class/accountClass.php';
+    require_once '../class/accountClass.php';
 ?>
 
 <!DOCTYPE html>
@@ -49,4 +49,7 @@ require_once '../class/accountClass.php';
        $account = new Account();
        $account->register($_POST['username'], $_POST['email'], $_POST['password']);
    }
+
+        $read = new read();
+        $read->allAccounts();
 ?>
