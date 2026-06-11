@@ -16,6 +16,9 @@
         <button class="rk-burger" id="burgerBtn" aria-label="Menu openen">
             <i class="ti ti-menu-2" aria-hidden="true"></i>
         </button>
+        <button class="rk-open-order" id="open-order" aria-label="Open order menu">
+
+        </button>
     </div>
 </nav>
 
@@ -27,3 +30,6 @@
     <a href="#">Over ons</a>
     <a href="#">Contact</a>
 </div>
+<link rel="stylesheet" href="/De-Romeinse-Kade/Lucas/styling/order-popup.css">
+
+<script src="/De-Romeinse-Kade/Lucas/scripts/openOrder.js"></script>

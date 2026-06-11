@@ -40,6 +40,9 @@ $items = $ShoppingCart->readItems();
     <title>Menu</title>
 
     <link rel="stylesheet" href="../../Lucas/styling/styling.css">
+    <link rel="stylesheet" href="../styling/order-popup.css">
+
+
 </head>
 
 <body>
@@ -48,9 +51,7 @@ $items = $ShoppingCart->readItems();
     <div class="menu-container">
 
         <?php foreach ($items as $item): ?>
-
             <div class="menu-item">
-
                 <h3><?= htmlspecialchars($item['item']) ?></h3>
                 <p><?= htmlspecialchars($item['omschrijving']) ?></p>
                 <p>€<?= htmlspecialchars($item['prijs']) ?></p>
@@ -75,6 +76,8 @@ $items = $ShoppingCart->readItems();
             </div>
         <?php endforeach; ?>
     </div>
+
+
 </body>
 
 </html>

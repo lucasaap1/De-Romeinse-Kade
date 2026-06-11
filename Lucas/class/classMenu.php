@@ -32,7 +32,7 @@ class ShoppingCart
     public function addToOrder(int $customerId, int $itemId): bool
     {
         $stmt = $this->db->prepare("
-        INSERT INTO bestellingen (customer_id, item)
+        INSERT INTO bestellingen (bestelling_ID, item)
         VALUES (:customer_id, :item)
     ");
 
@@ -46,7 +46,6 @@ class ShoppingCart
     {
         if ($id <= 0) {
             return false;
-            echo "false";
         }
 
         $stmt = $this->db->prepare("
